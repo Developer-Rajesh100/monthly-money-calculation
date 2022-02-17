@@ -72,5 +72,9 @@ document.getElementById("save-btn").addEventListener("click", function () {
   const remBalance = reBalance.innerText;
   const remaBalance = parseFloat(remBalance);
   reBalance.innerText = correntMoney;
+
+  if (correntbalance < savePars) {
+    alert("Please Input Valide Value");
+  }
   //   document.getElementById("remaining-balance").innerText = correntMoney;
 });
