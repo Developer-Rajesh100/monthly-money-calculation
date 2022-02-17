@@ -17,12 +17,12 @@ document.getElementById("calculate-btn").addEventListener("click", function () {
   //   TOTAL BALANCE MINUS ALL COST
   const monthlyBalance = monthlyIncome - total;
   document.getElementById("balance").innerText = monthlyBalance;
-  console.log(monthlyBalance);
+  //   console.log(monthlyBalance);
   //   CLEAR INPUT BOX
-  income.value = "";
-  foodCost.value = "";
-  rentCost.value = "";
-  clothesCost.value = "";
+  //   income.value = "";
+  //   foodCost.value = "";
+  //   rentCost.value = "";
+  //   clothesCost.value = "";
   // SAVE SECTION
 
   //   ERROR HANDELING
@@ -45,3 +45,32 @@ document.getElementById("calculate-btn").addEventListener("click", function () {
   const saveParcent = (monthlyIncome / 100) * monthlySave;
   return saveParcent;
 }); */
+
+// SAVE SECTION
+document.getElementById("save-btn").addEventListener("click", function () {
+  const parMonth = document.getElementById("monthly-income");
+  const parMonthCost = parMonth.value;
+
+  const monthlySave = document.getElementById("save");
+  const parMonthsave = monthlySave.value;
+  const monthly1 = parseFloat(parMonthsave);
+
+  console.log(monthly1);
+  const totalMonthlycost = (parMonthCost / 100) * monthly1;
+  document.getElementById("saving-amount").innerText = totalMonthlycost;
+
+  const save = document.getElementById("saving-amount");
+  const saveAm = save.innerText;
+  const savePars = parseFloat(saveAm);
+
+  const remaining = document.getElementById("balance");
+  const remainingInnetText = remaining.innerText;
+  const correntbalance = parseFloat(remainingInnetText);
+  const correntMoney = correntbalance - savePars;
+
+  const reBalance = document.getElementById("remaining-balance");
+  const remBalance = reBalance.innerText;
+  const remaBalance = parseFloat(remBalance);
+  reBalance.innerText = correntMoney;
+  //   document.getElementById("remaining-balance").innerText = correntMoney;
+});
