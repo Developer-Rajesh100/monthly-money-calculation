@@ -23,6 +23,8 @@ document.getElementById("calculate-btn").addEventListener("click", function () {
   foodCost.value = "";
   rentCost.value = "";
   clothesCost.value = "";
+  // SAVE SECTION
+
   //   ERROR HANDELING
   if (
     monthlyIncome < 0 ||
@@ -34,3 +36,12 @@ document.getElementById("calculate-btn").addEventListener("click", function () {
     alert("Please Input Valide Value");
   }
 });
+// SAVE SECTION
+/* document.getElementById("save-btn").addEventListener("click", function () {
+  const income = document.getElementById("monthly-income");
+  const monthlyIncome = parseFloat(income).value;
+  const saveInput = document.getElementById("save");
+  const monthlySave = parseFloat(saveInput).value;
+  const saveParcent = (monthlyIncome / 100) * monthlySave;
+  return saveParcent;
+}); */
