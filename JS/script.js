@@ -17,13 +17,6 @@ document.getElementById("calculate-btn").addEventListener("click", function () {
   //   TOTAL BALANCE MINUS ALL COST
   const monthlyBalance = monthlyIncome - total;
   document.getElementById("balance").innerText = monthlyBalance;
-  //   console.log(monthlyBalance);
-  //   CLEAR INPUT BOX
-  //   income.value = "";
-  //   foodCost.value = "";
-  //   rentCost.value = "";
-  //   clothesCost.value = "";
-  // SAVE SECTION
 
   //   ERROR HANDELING
   if (
@@ -36,15 +29,6 @@ document.getElementById("calculate-btn").addEventListener("click", function () {
     alert("Please Input Valide Value");
   }
 });
-// SAVE SECTION
-/* document.getElementById("save-btn").addEventListener("click", function () {
-  const income = document.getElementById("monthly-income");
-  const monthlyIncome = parseFloat(income).value;
-  const saveInput = document.getElementById("save");
-  const monthlySave = parseFloat(saveInput).value;
-  const saveParcent = (monthlyIncome / 100) * monthlySave;
-  return saveParcent;
-}); */
 
 // SAVE SECTION
 document.getElementById("save-btn").addEventListener("click", function () {
@@ -76,5 +60,4 @@ document.getElementById("save-btn").addEventListener("click", function () {
   if (correntbalance < savePars) {
     alert("Please Input Valide Value");
   }
-  //   document.getElementById("remaining-balance").innerText = correntMoney;
 });
